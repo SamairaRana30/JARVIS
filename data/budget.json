@@ -1,0 +1,18 @@
+{
+  "monthly_income": 800,
+  "currency": "EUR",
+  "month": "2025-06",
+  "limits": {
+    "food":          200,
+    "transport":     80,
+    "uni":           50,
+    "clothes":       100,
+    "health":        40,
+    "entertainment": 60,
+    "personal":      50,
+    "tech":          30,
+    "other":         50
+  },
+  "savings_goal": 150,
+  "savings_current": 0
+}

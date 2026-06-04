@@ -1,0 +1,8 @@
+{
+  "habits": ["drink water", "stretch", "review tasks"],
+  "wellbeing": {
+    "sleep": "7h",
+    "mood": "good",
+    "exercise": "30 min walk"
+  }
+}

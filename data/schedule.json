@@ -1,0 +1,24 @@
+{
+  "classes": [
+    {
+      "id": "cls_001",
+      "name": "Web Development",
+      "room": "Room 204",
+      "type": "Lecture",
+      "days": ["tuesday", "thursday"],
+      "time": "09:00",
+      "duration_minutes": 90,
+      "color": "#6C63FF"
+    },
+    {
+      "id": "cls_002",
+      "name": "Scrum Project",
+      "room": "Online",
+      "type": "Seminar",
+      "days": ["monday", "tuesday", "thursday"],
+      "time": "14:00",
+      "duration_minutes": 60,
+      "color": "#4ECDC4"
+    }
+  ]
+}

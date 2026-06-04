@@ -1,0 +1,25 @@
+{
+  "name": "Samaira",
+  "location": "Berlin",
+  "uni": "your university",
+  "projects": ["StyleMate", "Scrum report"],
+  "preferences": {
+    "response_style": "brief and clear, step-by-step when asked",
+    "language": "English",
+    "voice_name": "Jarvis"
+  },
+  "study_apps": ["Code", "Notion", "Chrome"],
+  "quick_links": {
+    "notion": "https://notion.so",
+    "uni portal": "https://example.com",
+    "email": "https://mail.google.com",
+    "gmail": "https://mail.google.com",
+    "calendar": "https://calendar.google.com",
+    "google calendar": "https://calendar.google.com",
+    "github": "https://github.com",
+    "project board": "https://notion.so",
+    "youtube": "https://youtube.com",
+    "google": "https://google.com"
+  },
+  "notes": []
+}

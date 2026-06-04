@@ -1,0 +1,13 @@
+{
+  "long_term": [
+    {"goal": "Graduate with honours", "deadline": "2026-06", "progress": 60}
+  ],
+  "short_term": [
+    {"goal": "Ship StyleMate MVP", "deadline": "2025-09", "progress": 30}
+  ],
+  "weekly": [
+    "Study 2 hours daily",
+    "Exercise 4x",
+    "Finish Scrum report"
+  ]
+}

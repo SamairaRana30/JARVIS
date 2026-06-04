@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jarvis runtime files
+tts_out.mp3
+logs/
+exports/
+backups/
+data/chroma_db/
+data/rag_index_meta.json
+data/weather_cache.json
+data/clipboard_history.json
+
+# WhatsApp bridge sessions (contain auth tokens)
+whatsapp_bridge/auth_data/
+whatsapp_bridge/bridge.log
+whatsapp_bridge_uni/auth_data_uni/
+whatsapp_bridge_uni/bridge.log
+
+# Credentials in config (keep the file, not the secrets)
+# config.yaml is committed but secrets should be rotated
+
+# Memory/session data (personal)
+memory/sessions.json
+memory/wellbeing_log.json
+logs/conversations/
+
+# Notes (personal content)
+notes/
+
+# Journal (private)
+data/journal/
+
+# Closet photos (large files)
+assets/closet/
+
+# Model files (large)
+assets/models/
+assets/piper/
+
+# Placeholder audio (generated on first run)
+assets/sounds/lofi.mp3
+assets/sounds/rain.mp3
+assets/sounds/white_noise.mp3
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
+
+# Test cache
+.pytest_cache/
+*.coverage
+
+# Node (WhatsApp bridge)
+whatsapp_bridge/node_modules/
+whatsapp_bridge_uni/node_modules/
+
+# First run flag
+first_run.flag
+
+# Notepad notes temp
+data/notepad_notes/
+
+# Study sessions (personal)
+data/study_sessions.json
+data/focus_log.json

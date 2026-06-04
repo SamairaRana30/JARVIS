@@ -1,0 +1,17 @@
+{
+  "outfits": [
+    {
+      "id": "outfit_001",
+      "name": "Casual study day",
+      "occasion": "study",
+      "items": ["item_001", "item_002", "item_003"],
+      "weather": ["mild", "warm"],
+      "times_worn": 5,
+      "last_worn": "2025-06-01",
+      "rating": 5,
+      "photo": null,
+      "created": "2025-05-01",
+      "notes": "Go-to study outfit"
+    }
+  ]
+}

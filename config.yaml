@@ -1,0 +1,208 @@
+version: "0.1.0"
+
+ui:
+  mode: "hud"   # "hud" = Stark Industries HUD  |  "classic" = standard dark UI
+
+meeting:
+  auto_summarise: true
+  save_raw_transcript: true
+  chunk_seconds: 30
+
+model: llama3                  # primary model for reasoning
+fast_model: ""                 # optional fast model e.g. phi3:mini or qwen3:0.6b
+                               # leave empty to always use primary model
+context_length: 4096
+max_turns: 20
+save_transcripts: true
+
+timezone: "Europe/Berlin"
+
+whisper:
+  model_size: "base"      # tiny / base / small / medium / large
+  language: "auto"        # auto-detect or "en" / "de"
+  device: "cpu"           # cpu / cuda (if GPU available)
+  compute_type: "int8"    # int8 (fastest on CPU) / float16 / float32
+
+wake_word:
+  model_path: "assets/models/hey_jarvis.onnx"
+  model_url:  "https://github.com/dscripka/openWakeWord/releases/download/v0.5.1/hey_jarvis_v0.1.onnx"
+  sensitivity: 0.75
+
+# Legacy flat keys kept for compatibility
+wake_word_sensitivity: 0.75
+mic_device_index: 1
+sample_rate: 16000
+
+voice: en-GB-RyanNeural
+speaking_rate: "+0%"      # edge-tts rate offset e.g. +10% / -10%
+speaking_volume: "+0%"    # edge-tts volume offset e.g. +10% / -10%
+speaking_pitch: "-5Hz"
+volume: 1.0               # pygame output volume 0.0 – 1.0
+
+language:
+  default: "en"                       # en / de
+  tts_voice_en: "en-GB-RyanNeural"
+  tts_voice_de: "de-DE-ConradNeural"
+  auto_detect: true                   # auto-detect from Whisper
+
+hotkeys:
+  manual_trigger: "ctrl+shift+j"
+  quick_note:     "ctrl+shift+n"
+  mute_toggle:    "ctrl+shift+m"
+  toggle_hud:     "ctrl+shift+h"
+
+sounds:
+  wake_chime:  "assets/sounds/wake.mp3"
+  error_chime: "assets/sounds/error.mp3"
+  done_chime:  "assets/sounds/done.mp3"
+  alarm:       "assets/sounds/alarm.mp3"
+  volume:      0.7
+
+log_level: info
+dry_run: false
+low_power_mode: auto
+
+profile: study
+
+expiry_warning_days: 2
+
+budget:
+  currency: "EUR"
+  warning_threshold: 0.80
+  monthly_reset_day: 1
+  savings_goal: 150
+  track_in_briefing: true
+
+stylist:
+  suggest_in_briefing: true
+  avoid_rewear_days: 3
+  photo_path: "assets/closet/"
+  color_rules_path: "data/color_rules.json"
+
+news:
+  default_source: "bbc"
+  headlines_count: 3
+  feeds:
+    bbc:     "http://feeds.bbci.co.uk/news/rss.xml"
+    reuters: "https://feeds.reuters.com/reuters/topNews"
+    tech:    "http://feeds.bbci.co.uk/news/technology/rss.xml"
+    world:   "http://feeds.bbci.co.uk/news/world/rss.xml"
+
+weather:
+  default_location: "Berlin"
+  units: "metric"
+
+notion:
+  token: ""   # add your token from notion.so/my-integrations
+  default_page_id: ""
+
+google_calendar:
+  email:        ""   # your Gmail address
+  app_password: ""   # from myaccount.google.com/apppasswords
+
+reminders:
+  warn_hours_before: [24, 2, 0.5]
+
+ntfy:
+  topic: "jarvis-samaira-r9k2m"   # your private topic — subscribe to this in the ntfy app
+  server: "https://ntfy.sh"
+  token:  ""
+
+spotify:
+  client_id:     ""
+  client_secret: ""
+  redirect_uri:  "http://localhost:8888/callback"
+
+screen_reader:
+  tesseract_path: "C:/Program Files/Tesseract-OCR/tesseract.exe"
+  language: "eng"
+
+backup:
+  auto_weekly: true
+  keep_last_n: 8
+  keep_monthly: true
+  auto_day:  "sunday"
+  auto_time: "00:00"
+
+focus_tracker:
+  enabled: true
+  start_delay_seconds: 120
+  check_interval_seconds: 30
+  idle_threshold_minutes: 5
+
+ollama:
+  restart_on_crash: true
+  max_restart_attempts: 2
+  timeout_seconds: 30
+
+briefing:
+  dedicated_panel: true
+  panel_auto_close_minutes: 5
+
+briefing:
+  auto_on_startup: true
+  startup_delay_seconds: 60      # wait for PC to settle before first briefing
+  morning_time: "08:00"          # scheduled morning briefing
+  evening_time: "20:00"          # evening check-in
+  weekly_review_day: "saturday"
+  weekly_review_time: "10:00"
+
+sleep:
+  auto_sleep_time: "23:30"   # set to null to disable
+  auto_wake_time:  "07:00"   # set to null to disable
+
+study_mode:
+  background_sound: "lofi"
+  sound_path: assets/sounds/
+  volume: 0.4
+
+pomodoro:
+  work_minutes: 25
+  break_minutes: 5
+  long_break_minutes: 15
+  cycles_before_long_break: 4
+  sound_on_end: true
+
+notes:
+  default_app: "jarvis"   # jarvis / notion / notepad / onenote
+  default_folder: quick
+  auto_organise: true
+  remind_related: true
+  max_read_length: 500
+  summary_on_briefing: true
+
+memory:
+  extract_after_session: true
+  load_last_session: true
+  load_long_term: true
+  max_long_term_facts: 20
+  followup_reminder: true
+  wellbeing_nudge: true
+  progress_in_briefing: true
+  conversation_search: true
+
+paths:
+  memory:    data/memory.json
+  tasks:     data/tasks.json
+  goals:     data/goals.json
+  fridge:    data/fridge.json
+  routines:  data/routines.json
+  sites:     data/sites.json
+  logs:      logs/jarvis.log
+  convos:    logs/conversations/
+  backups:   backups/
+  prompts:   prompts/system.txt
+  notes:     notes/
+  lt_memory: memory/long_term.json
+  sessions:  memory/sessions.json
+  decisions: memory/decisions.json
+  followups: memory/followups.json
+  wellbeing: memory/wellbeing_log.json
+  progress:  memory/progress.json
+  notes_index: data/notes_index.json
+  reminders:   data/reminders.json
+  exports:     exports/
+  closet:       data/closet.json
+  outfits:      data/outfits.json
+  budget:       data/budget.json
+  transactions: data/transactions.json

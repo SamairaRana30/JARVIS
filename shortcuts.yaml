@@ -1,0 +1,41 @@
+# shortcuts.yaml — Define your own multi-step Jarvis voice macros.
+#
+# Format:
+#   "trigger phrase": "command1 | command2 | command3"
+#
+# Jarvis executes each command in sequence.
+# Use | to separate commands. Each command is processed through the full intent router.
+#
+# Examples:
+
+"morning routine":
+  - "what are my tasks today"
+  - "what's on my calendar today"
+  - "what should I wear today"
+
+"end of day":
+  - "what did I complete today"
+  - "what are my tasks tomorrow"
+  - "back up everything"
+
+"study setup":
+  - "start study mode"
+  - "start pomodoro"
+  - "play lofi"
+
+"weekly review":
+  - "how am I doing"
+  - "what's my budget looking like"
+  - "how are my savings going"
+  - "weekly habits report"
+
+"check everything":
+  - "any whatsapp messages"
+  - "check my email"
+  - "what's on my calendar today"
+  - "what's the weather"
+
+"wind down":
+  - "how am I doing"
+  - "back up everything"
+  - "go to sleep"

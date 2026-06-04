@@ -1,0 +1,36 @@
+{
+  "macros": [
+    {
+      "name": "morning routine",
+      "trigger": "morning routine",
+      "commands": [
+        "run morning briefing",
+        "open notion",
+        "play lofi",
+        "start pomodoro"
+      ],
+      "description": "Full morning startup sequence"
+    },
+    {
+      "name": "evening wind down",
+      "trigger": "wind down",
+      "commands": [
+        "stop music",
+        "what did i complete today",
+        "what are my tasks tomorrow",
+        "go to sleep"
+      ],
+      "description": "Evening shutdown sequence"
+    },
+    {
+      "name": "deep work",
+      "trigger": "deep work mode",
+      "commands": [
+        "start study mode",
+        "start a 90 minute timer",
+        "play rain sounds"
+      ],
+      "description": "Maximum focus session"
+    }
+  ]
+}

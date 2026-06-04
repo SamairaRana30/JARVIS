@@ -1,0 +1,256 @@
+/* ============================================================
+   Jarvis HUD — Purple/Pink/Teal Palette
+   Primary: #8B2BE2 (vivid purple)
+   Secondary: #E91E8C (hot pink/magenta)
+   Accent: #00FFB3 (teal)
+   BG: #050510 (deep space)
+   ============================================================ */
+
+/* ── Global ────────────────────────────────────────────────── */
+* {
+    font-family: "Share Tech Mono", "Courier New", monospace;
+    font-size: 13px;
+    color: #C77DFF;
+    outline: none;
+}
+
+QMainWindow, QWidget#hud_root {
+    background-color: #050510;
+}
+
+/* ── Scrollbars ─────────────────────────────────────────────── */
+QScrollBar:vertical {
+    background: #0D0B1E;
+    width: 4px;
+    border-radius: 2px;
+}
+QScrollBar::handle:vertical {
+    background: #8B2BE2;
+    border-radius: 2px;
+    min-height: 20px;
+}
+QScrollBar::handle:vertical:hover { background: #E91E8C; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar:horizontal { height: 4px; background: #0D0B1E; }
+QScrollBar::handle:horizontal { background: #8B2BE2; border-radius: 2px; }
+
+/* ── HUD Panel ──────────────────────────────────────────────── */
+QFrame#hud_panel {
+    background: rgba(13, 11, 30, 0.88);
+    border: 1px solid rgba(139, 43, 226, 0.3);
+}
+QFrame#hud_panel:hover {
+    border-color: rgba(233, 30, 140, 0.5);
+}
+
+/* ── Labels ─────────────────────────────────────────────────── */
+QLabel#hud_title {
+    font-family: "Orbitron", "Arial Black", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #C77DFF;
+    letter-spacing: 3px;
+}
+QLabel#hud_section {
+    font-size: 10px;
+    color: #3D1F6B;
+    letter-spacing: 2px;
+}
+QLabel#hud_value { font-size: 14px; color: #C77DFF; }
+QLabel#hud_dim   { color: #2A1450; font-size: 11px; }
+QLabel#hud_warn  { color: #FF9800; }
+QLabel#hud_alert { color: #E91E8C; }
+QLabel#hud_ok    { color: #00FFB3; }
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+QPushButton {
+    background: rgba(139, 43, 226, 0.15);
+    border: 1px solid rgba(139, 43, 226, 0.4);
+    color: #C77DFF;
+    padding: 6px 14px;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0px;
+}
+QPushButton:hover {
+    background: rgba(233, 30, 140, 0.2);
+    border-color: #E91E8C;
+    color: #FF69B4;
+}
+QPushButton:pressed {
+    background: rgba(139, 43, 226, 0.4);
+}
+
+QPushButton#hud_accent {
+    background: rgba(0, 255, 179, 0.1);
+    border-color: #00FFB3;
+    color: #00FFB3;
+}
+QPushButton#hud_accent:hover {
+    background: rgba(0, 255, 179, 0.25);
+}
+
+QPushButton#hud_warn {
+    border-color: #E91E8C;
+    color: #E91E8C;
+}
+QPushButton#hud_warn:hover { background: rgba(233, 30, 140, 0.2); }
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background: #0D0B1E;
+    border: 1px solid rgba(139, 43, 226, 0.3);
+    border-radius: 0;
+    padding: 6px 10px;
+    color: #C77DFF;
+    font-family: "Share Tech Mono", monospace;
+    selection-background-color: rgba(139, 43, 226, 0.4);
+}
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #8B2BE2;
+    background: #120F2A;
+}
+QLineEdit::placeholder { color: #3D1F6B; }
+
+/* ── Progress bars ───────────────────────────────────────────── */
+QProgressBar {
+    background: #120F2A;
+    border: 1px solid rgba(139, 43, 226, 0.2);
+    border-radius: 0;
+    height: 6px;
+    text-align: center;
+    color: transparent;
+}
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8B2BE2, stop:1 #E91E8C);
+}
+QProgressBar#hud_warn::chunk  { background: #FF9800; }
+QProgressBar#hud_alert::chunk { background: #E91E8C; }
+QProgressBar#hud_ok::chunk    { background: #00FFB3; }
+
+/* ── ComboBox ────────────────────────────────────────────────── */
+QComboBox {
+    background: #120F2A;
+    border: 1px solid rgba(139, 43, 226, 0.3);
+    border-radius: 0;
+    padding: 4px 8px;
+    color: #C77DFF;
+    font-family: "Share Tech Mono", monospace;
+}
+QComboBox:hover { border-color: #8B2BE2; }
+QComboBox::drop-down { border: none; width: 20px; }
+QComboBox QAbstractItemView {
+    background: #120F2A;
+    border: 1px solid rgba(139, 43, 226, 0.4);
+    selection-background-color: rgba(139, 43, 226, 0.3);
+    color: #C77DFF;
+}
+
+/* ── List widgets ────────────────────────────────────────────── */
+QListWidget {
+    background: #050510;
+    border: 1px solid rgba(139, 43, 226, 0.2);
+    border-radius: 0;
+    outline: none;
+}
+QListWidget::item { padding: 6px 8px; color: #C77DFF; }
+QListWidget::item:hover { background: rgba(139, 43, 226, 0.1); }
+QListWidget::item:selected { background: rgba(233, 30, 140, 0.2); color: #FF69B4; }
+
+/* ── Tree widget ─────────────────────────────────────────────── */
+QTreeWidget {
+    background: #050510;
+    border: 1px solid rgba(139, 43, 226, 0.2);
+    outline: none;
+}
+QTreeWidget::item { padding: 4px; color: #C77DFF; }
+QTreeWidget::item:hover { background: rgba(139, 43, 226, 0.1); }
+QTreeWidget::item:selected { background: rgba(233, 30, 140, 0.2); color: #FF69B4; }
+
+/* ── Tab widget ──────────────────────────────────────────────── */
+QTabWidget::pane {
+    border: 1px solid rgba(139, 43, 226, 0.25);
+    background: #050510;
+}
+QTabBar::tab {
+    background: #0D0B1E;
+    border: 1px solid rgba(139, 43, 226, 0.2);
+    border-bottom: none;
+    padding: 6px 16px;
+    color: #3D1F6B;
+    font-family: "Share Tech Mono", monospace;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+QTabBar::tab:selected { color: #C77DFF; border-color: rgba(139, 43, 226, 0.5); background: #050510; }
+QTabBar::tab:hover { color: #E91E8C; }
+
+/* ── Sliders ─────────────────────────────────────────────────── */
+QSlider::groove:horizontal {
+    background: #120F2A;
+    height: 3px;
+    border: 1px solid rgba(139, 43, 226, 0.2);
+}
+QSlider::handle:horizontal {
+    background: #8B2BE2;
+    width: 12px; height: 12px;
+    border-radius: 0;
+    margin: -5px 0;
+    border: 1px solid #E91E8C;
+}
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8B2BE2, stop:1 #E91E8C);
+}
+
+/* ── Splitter ────────────────────────────────────────────────── */
+QSplitter::handle { background: rgba(139, 43, 226, 0.15); width: 1px; }
+
+/* ── Tooltips ────────────────────────────────────────────────── */
+QToolTip {
+    background: #120F2A;
+    border: 1px solid rgba(139, 43, 226, 0.5);
+    color: #C77DFF;
+    padding: 4px 8px;
+    font-family: "Share Tech Mono", monospace;
+}
+
+/* ── Checkboxes ──────────────────────────────────────────────── */
+QCheckBox { spacing: 8px; color: #C77DFF; }
+QCheckBox::indicator {
+    width: 14px; height: 14px;
+    border: 1px solid rgba(139, 43, 226, 0.4);
+    background: #120F2A;
+    border-radius: 0;
+}
+QCheckBox::indicator:checked {
+    background: #8B2BE2;
+    border-color: #E91E8C;
+}
+
+/* ── Section headers ─────────────────────────────────────────── */
+QWidget#top_bar    { background: #050510; border-bottom: 1px solid rgba(139, 43, 226, 0.25); }
+QWidget#bottom_bar { background: #050510; border-top:    1px solid rgba(139, 43, 226, 0.25); }
+
+/* ── Chat terminal ───────────────────────────────────────────── */
+QPlainTextEdit#hud_terminal {
+    background: #050510;
+    border: none;
+    color: #C77DFF;
+    font-family: "Share Tech Mono", "Courier New", monospace;
+    font-size: 12px;
+    padding: 4px;
+    selection-background-color: rgba(139, 43, 226, 0.3);
+}
+QLineEdit#hud_cmd_input {
+    background: #050510;
+    border: none;
+    border-top: 1px solid rgba(139, 43, 226, 0.2);
+    color: #00FFB3;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 12px;
+    padding: 6px 10px;
+}

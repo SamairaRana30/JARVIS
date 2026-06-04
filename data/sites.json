@@ -1,0 +1,18 @@
+{
+  "distracting": [
+    "youtube.com", "instagram.com", "twitter.com",
+    "tiktok.com", "reddit.com", "facebook.com",
+    "twitch.tv", "netflix.com"
+  ],
+  "study": [
+    "notion.so", "mail.google.com",
+    "calendar.google.com", "github.com",
+    "stackoverflow.com"
+  ],
+  "quick_links": {
+    "uni portal": "https://example.com",
+    "project board": "https://notion.so",
+    "email": "https://mail.google.com",
+    "calendar": "https://calendar.google.com"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "items": [
+    {"name": "eggs",    "quantity": "6",     "expires": "2025-06-08"},
+    {"name": "milk",    "quantity": "1L",    "expires": "2025-06-05"},
+    {"name": "spinach", "quantity": "1 bag", "expires": "2025-06-04"},
+    {"name": "cheese",  "quantity": "200g",  "expires": "2025-06-12"},
+    {"name": "pasta",   "quantity": "500g",  "expires": null}
+  ],
+  "grocery_list": ["olive oil", "tomatoes"],
+  "last_updated": "2025-06-03"
+}
